@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/webhook/call",
+      "dest": "/api/webhook/call.js"
+    }
+  ],
+  "env": {
+    "TELNYX_API_KEY": "@telnyx_api_key",
+    "COMPOSIO_API_KEY": "@composio_api_key",
+    "OPENAI_API_KEY": "@openai_api_key",
+    "ELEVENLABS_API_KEY": "@elevenlabs_api_key"
+  }
+}
